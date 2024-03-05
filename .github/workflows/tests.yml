@@ -37,7 +37,7 @@ jobs:
     - name: Make mandatory Makefile targets
       working-directory: ./src
       run: |
-        make find_duplecates
+        make find_duplicates
         make cryptography
       
     - name: Make optional Makefile target ascii_sort if present
