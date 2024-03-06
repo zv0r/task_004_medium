@@ -16,7 +16,7 @@ def test_cryptography():
     file = "tests/cryptography/chifre_me.txt"
     result = run([B_PATH_FILE], input=f"{file}", encoding='utf-8', stdout=PIPE)
     assert result.stdout == ""
-    file_data = run([f"cat {file}"], stdout=PIPE)
+    file_data = run(['cat', f"{file}"], encoding='utf-8', stdout=PIPE)
     assert file_data.stdout == "x ficmhpt m grr ifn m fvplyki m teq ndygy xky hoc"
 
 if __name__ == "__main__":
