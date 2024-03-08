@@ -10,5 +10,6 @@ find_duplicates:
 	${CC} ${CFLAGS} -o ${BIN_DIR}/find_duplicates find_duplicates.c misc.c
 
 cryptography:
+	${CC} ${CFLAGS} -o ${BIN_DIR}/cryptography cryptography.c misc.c
 
 ascii_sort:
