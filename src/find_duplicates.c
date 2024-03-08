@@ -21,8 +21,8 @@ int main(void) {
 
 void compare_actions_byte_by_byte(const File* const file1, const File* const file2) {
     bool files_are_same = true;
-    char char1, char2;
     while (files_are_same) {
+        int char1, char2;
         char1 = fgetc(file1->fp);
         char2 = fgetc(file2->fp);
         files_are_same = char1 == char2;

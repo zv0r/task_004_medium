@@ -36,9 +36,10 @@ void encrypt_file(FILE* fp) {
     size_t counter = 0;
     char* abc = ENCRYPTION_KEY;
     size_t abc_length = strlen(abc);
-    size_t abc_position = 0;
-    char current_symbol, current_symbol_encrypted;
+    char current_symbol;
     while ((current_symbol = normalize_symbol(fgetc(fp))) != EOF) {
+        size_t abc_position;
+        char current_symbol_encrypted;
         abc_position = counter % abc_length;
         current_symbol_encrypted = encrypt(current_symbol, abc[abc_position]);
         fseek(fp, -1, SEEK_CUR);
